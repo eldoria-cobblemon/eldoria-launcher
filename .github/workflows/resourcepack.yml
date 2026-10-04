@@ -49,9 +49,14 @@ jobs:
           mkdir -p ~/.ssh
           printf '%s\n' "$CHAVE_LEITURA" > ~/.ssh/pack && chmod 600 ~/.ssh/pack
           echo 'github.com ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOMqqnkVzrm0SdG6UOoqKLsabgH5C9okWi0dh2l9GKJl' > ~/.ssh/known_hosts
-          commit=$(GIT_SSH_COMMAND='ssh -i ~/.ssh/pack -o IdentitiesOnly=yes' git ls-remote "git@github.com:$REPO_PACK.git" "refs/heads/$RAMO_PACK" | cut -f1)
+          commit=$(GIT_SSH_COMMAND='ssh -i ~/.ssh/pack -o IdentitiesOnly=yes' git ls-remote "git@github.com:$REPO_PACK.git" "refs/heads/$RAMO_PACK" | cut -f1) || commit=''
           rm -f ~/.ssh/pack
-          if [ -z "$commit" ]; then echo "::error::Não achei o ramo $RAMO_PACK em $REPO_PACK"; exit 1; fi
+          if [ -z "$commit" ]; then
+            msg="Sem acesso ao ramo $RAMO_PACK de $REPO_PACK (Deploy key cadastrada lá?)"
+            # rodada automática: só avisa (senão chega e-mail de falha a cada 10 min); manual: erro
+            if [ "$GITHUB_EVENT_NAME" = "schedule" ]; then echo "::warning::$msg"; echo "mudou=nao" >> "$GITHUB_OUTPUT"; exit 0; fi
+            echo "::error::$msg"; exit 1
+          fi
           publicado=$(gh api -H 'Accept: application/vnd.github.raw' "repos/$GITHUB_REPOSITORY/contents/manifest.json" | jq -r '.resourcepackCommit // ""')
           echo "commit=$commit" >> "$GITHUB_OUTPUT"
           if [ "$commit" = "$publicado" ] && [ "$GITHUB_EVENT_NAME" != "workflow_dispatch" ]; then
