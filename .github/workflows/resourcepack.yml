@@ -69,14 +69,14 @@ jobs:
 
       - name: Baixa o launcher publicado
         if: steps.ver.outputs.mudou == 'sim'
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           path: site
           fetch-depth: 1
 
       - name: Baixa o pack
         if: steps.ver.outputs.mudou == 'sim' && inputs.sem_pack != true
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: ${{ env.REPO_PACK }}
           ref: ${{ steps.ver.outputs.commit }}
@@ -85,7 +85,7 @@ jobs:
           path: pack
           fetch-depth: 1
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         if: steps.ver.outputs.mudou == 'sim'
         with:
           node-version: 22
