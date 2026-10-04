@@ -131,8 +131,9 @@ async function conferir() {
     log(`OK no ar: publicação #${m.seq}, ${NOME} conferido.`)
 
     // Limpeza da Release: fica o zip atual e o anterior (jogador no meio do download ainda termina).
-    const assets = JSON.parse(gh('release', 'view', TAG, '--repo', REPO, '--json', 'assets')).assets
-        .sort((a, b) => Date.parse(b.createdAt) - Date.parse(a.createdAt))
+    let assets = []
+    try { assets = JSON.parse(gh('release', 'view', TAG, '--repo', REPO, '--json', 'assets')).assets } catch { /* Release ainda não existe */ }
+    assets.sort((a, b) => Date.parse(b.createdAt) - Date.parse(a.createdAt))
     const atual = path.basename(new URL(pack.url).pathname)
     let anterior = null
     for (const a of assets) {
