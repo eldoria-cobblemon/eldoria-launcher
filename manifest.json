@@ -1,0 +1,775 @@
+{
+ "formato": 1,
+ "seq": 12,
+ "publicadoEm": "2026-10-04T14:22:46.007Z",
+ "servidor": {
+  "nome": "ELDORIA COBBLEMON",
+  "endereco": "us-1.blocohost.com:10023"
+ },
+ "minecraft": {
+  "versao": "1.21.1",
+  "urlVersao": "https://piston-meta.mojang.com/v1/packages/22a1966494dfa4eeb5ee778c8e6ed5b774839582/1.21.1.json",
+  "sha1Versao": "22a1966494dfa4eeb5ee778c8e6ed5b774839582"
+ },
+ "fabric": {
+  "loader": "0.18.4",
+  "mainClass": "net.fabricmc.loader.impl.launch.knot.KnotClient",
+  "argsJvm": [
+   "-DFabricMcEmu= net.minecraft.client.main.Main "
+  ],
+  "argsJogo": [],
+  "bibliotecas": [
+   {
+    "nome": "org.ow2.asm:asm:9.9",
+    "caminho": "org/ow2/asm/asm/9.9/asm-9.9.jar",
+    "url": "https://maven.fabricmc.net/org/ow2/asm/asm/9.9/asm-9.9.jar",
+    "sha1": "c29635c8a7afa03d74b33c1884df8abb2b3f3dcc",
+    "size": 126122
+   },
+   {
+    "nome": "org.ow2.asm:asm-analysis:9.9",
+    "caminho": "org/ow2/asm/asm-analysis/9.9/asm-analysis-9.9.jar",
+    "url": "https://maven.fabricmc.net/org/ow2/asm/asm-analysis/9.9/asm-analysis-9.9.jar",
+    "sha1": "0bf4fa6e66638851c1cd22c2caea0c3ee5d5f437",
+    "size": 35149
+   },
+   {
+    "nome": "org.ow2.asm:asm-commons:9.9",
+    "caminho": "org/ow2/asm/asm-commons/9.9/asm-commons-9.9.jar",
+    "url": "https://maven.fabricmc.net/org/ow2/asm/asm-commons/9.9/asm-commons-9.9.jar",
+    "sha1": "db9165a3bf908ded6b08612d583a15d1d0c7bda0",
+    "size": 74348
+   },
+   {
+    "nome": "org.ow2.asm:asm-tree:9.9",
+    "caminho": "org/ow2/asm/asm-tree/9.9/asm-tree-9.9.jar",
+    "url": "https://maven.fabricmc.net/org/ow2/asm/asm-tree/9.9/asm-tree-9.9.jar",
+    "sha1": "f8de6eead6d24dd0f45bd065bbe112b2cda6ea21",
+    "size": 51947
+   },
+   {
+    "nome": "org.ow2.asm:asm-util:9.9",
+    "caminho": "org/ow2/asm/asm-util/9.9/asm-util-9.9.jar",
+    "url": "https://maven.fabricmc.net/org/ow2/asm/asm-util/9.9/asm-util-9.9.jar",
+    "sha1": "42fdfc0508b43807c8078d6e82ecff2ce2112ae8",
+    "size": 94565
+   },
+   {
+    "nome": "net.fabricmc:sponge-mixin:0.17.0+mixin.0.8.7",
+    "caminho": "net/fabricmc/sponge-mixin/0.17.0+mixin.0.8.7/sponge-mixin-0.17.0+mixin.0.8.7.jar",
+    "url": "https://maven.fabricmc.net/net/fabricmc/sponge-mixin/0.17.0+mixin.0.8.7/sponge-mixin-0.17.0+mixin.0.8.7.jar",
+    "sha1": "cf31463202f72d03b0ef1e1e38e8ee71b7faaab6",
+    "size": 1505269
+   },
+   {
+    "nome": "net.fabricmc:intermediary:1.21.1",
+    "caminho": "net/fabricmc/intermediary/1.21.1/intermediary-1.21.1.jar",
+    "url": "https://maven.fabricmc.net/net/fabricmc/intermediary/1.21.1/intermediary-1.21.1.jar",
+    "sha1": "4b96f58657aa282efa6bb8ae9369c2d42cf96e8c",
+    "size": 657725
+   },
+   {
+    "nome": "net.fabricmc:fabric-loader:0.18.4",
+    "caminho": "net/fabricmc/fabric-loader/0.18.4/fabric-loader-0.18.4.jar",
+    "url": "https://maven.fabricmc.net/net/fabricmc/fabric-loader/0.18.4/fabric-loader-0.18.4.jar",
+    "sha1": "dc4682125d5db647d6ce80a98b98945835adcd4b",
+    "size": 1944518
+   }
+  ]
+ },
+ "java": {
+  "windows-x64": {
+   "url": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.12.1%2B1/OpenJDK21U-jre_x64_windows_hotspot_21.0.12.1_1.zip",
+   "sha256": "d35f31e712f0fcf6ac5a093edc90204fbff22f720ba3950bd09d331d5e621636",
+   "size": 48999141,
+   "versao": "jdk-21.0.12.1+1"
+  }
+ },
+ "launcher": {
+  "versao": "0.2.1",
+  "url": "https://github.com/eldoria-cobblemon/eldoria-launcher/releases/download/v0.2.1/EldoriaLauncher-Setup-0.2.1.exe",
+  "sha256": "fc2fda8e6ac6b0cccc4b66799055a5446990e3a82a2e826337c8939fb91189ae",
+  "size": 111764911
+ },
+ "pastasGerenciadas": [
+  "mods"
+ ],
+ "resourcepacksAtivos": [
+  "ELDORIA COBBLEMON.zip"
+ ],
+ "visual": {
+  "acento": null
+ },
+ "arquivos": [
+  {
+   "caminho": "mods/BetterThirdPerson-Fabric-1.21-1.9.0.jar",
+   "url": "https://cdn.modrinth.com/data/G1s2WpNo/versions/QZTn8cTa/BetterThirdPerson-Fabric-1.21-1.9.0.jar",
+   "sha256": "f9ec9dc6508b20d32a3c770ecc77641e8f87c98e298d58e2757a6ef14abbb457",
+   "size": 52188,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/CobbleDollars-fabric-2.0.0+Beta-6.1+1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/s7N7AsqL/versions/NQdxKsW7/CobbleDollars-fabric-2.0.0%2BBeta-6.1%2B1.21.1.jar",
+   "sha256": "a007523e2dd8c6f47edc914d33d26ad0a860a0124038e1ec6303a593a919c1b4",
+   "size": 500815,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/Cobblemon-fabric-1.8.1+1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/MdwFAVRL/versions/gBW3vLC7/Cobblemon-fabric-1.8.1%2B1.21.1.jar",
+   "sha256": "4d90ba6775e3a332aad9d5e49a9f6366f973b3e1a12e0004d22ce21c600eebc5",
+   "size": 137391338,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/CobblemonExtras-fabric-1.5.0.jar",
+   "url": "https://cdn.modrinth.com/data/TXoSDUCh/versions/DDRN0jaL/CobblemonExtras-fabric-1.5.0.jar",
+   "sha256": "13e36519aa8e55478ac439bbd8836ee36e06c3a1b425d7fd162ba8109bbd825e",
+   "size": 5036503,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/Cobbreeding-fabric-2.3.0.jar",
+   "url": "https://cdn.modrinth.com/data/ItmVb4zY/versions/dED6lApR/Cobbreeding-fabric-2.3.0.jar",
+   "sha256": "1643f2fa2ac80d7cb4a176e220020e4699263e2ce93b15a62963e57e325d9907",
+   "size": 475711,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/CustomNPCs-Unofficial-Fabric-1.21.1.20260521.jar",
+   "url": "https://eldoria-cobblemon.github.io/eldoria-launcher/arquivos/f8/f84db0d034b53dccb3d95cd7a1b1d1717105c20adb5164662dd42a8c5e3cf507/CustomNPCs-Unofficial-Fabric-1.21.1.20260521.jar",
+   "sha256": "f84db0d034b53dccb3d95cd7a1b1d1717105c20adb5164662dd42a8c5e3cf507",
+   "size": 13046471,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/ForgeConfigAPIPort-v21.1.6-1.21.1-Fabric.jar",
+   "url": "https://cdn.modrinth.com/data/ohNO6lps/versions/N5qzq0XV/ForgeConfigAPIPort-v21.1.6-1.21.1-Fabric.jar",
+   "sha256": "2e3a8f0e3bda85a7d722720e7ce879cbd9d028d9395c6fc224d329b3c982d9b1",
+   "size": 633065,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/InventoryProfilesNext-fabric-1.21.1-2.2.6 (1).jar",
+   "url": "https://cdn.modrinth.com/data/O7RBXm3n/versions/h1db7jG7/InventoryProfilesNext-fabric-1.21.1-2.2.6.jar",
+   "sha256": "b69ac6f98e99042d6edd755242bf76d35eea4342559d2b1d88160e556c629177",
+   "size": 1331935,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/Jade-1.21.1-Fabric-15.10.6.jar",
+   "url": "https://cdn.modrinth.com/data/nvQzSEkH/versions/adpNvTZS/Jade-1.21.1-Fabric-15.10.6.jar",
+   "sha256": "fb834cc77804a6f509690c54b4af56305ce7a7f3171f8616310710f0af1f673a",
+   "size": 740746,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/accessories-fabric-1.1.0-beta.53+1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/jtmvUHXj/versions/Xlt4eWBe/accessories-fabric-1.1.0-beta.53%2B1.21.1.jar",
+   "sha256": "51e6f6d52cb2523199ad36e5bc04802230f86904c35ac3dbf36e59c86b2c30d1",
+   "size": 1095802,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/additional_rpg_jewelry-fabric-2.3.0+1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/rULzJh3O/versions/b9plbkCS/additional_rpg_jewelry-fabric-2.3.0%2B1.21.1.jar",
+   "sha256": "67182980345ee600bf556e096140025adc35c814a3e238ec38ce3baeef8ec41f",
+   "size": 272256,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/appleskin-fabric-mc1.21-3.0.6.jar",
+   "url": "https://cdn.modrinth.com/data/EsAfCjCV/versions/b5ZiCjAr/appleskin-fabric-mc1.21-3.0.6.jar",
+   "sha256": "9a19cec1294b1bc708392a08e6926dcb85d7378ec5ad909a4b6fcb8bc3bfeaa2",
+   "size": 1082585,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/archers-fabric-3.1.0+1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/QgooUXAJ/versions/EQDvZ5hx/archers-fabric-3.1.0%2B1.21.1.jar",
+   "sha256": "b7afe290305e1e54f94eb70ddbd1b53af0a1682e5951ea24ed59bb28b6872996",
+   "size": 920977,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/archers_expansion-fabric-2.1.0+1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/1BHIIm4m/versions/AzQF18oI/archers_expansion-fabric-2.1.0%2B1.21.1.jar",
+   "sha256": "37d02e46a88db158cacce40dded356a61cf85f568f3627606683d9b279ea3753",
+   "size": 994681,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/architectury-13.0.11-fabric.jar",
+   "url": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/Pzc2FP5K/architectury-13.0.11-fabric.jar",
+   "sha256": "ab17d5c7d8d8c93cc713437ed426f0ff0d6f802a48fff0c579a9bd3aaa833efd",
+   "size": 600921,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/armory-fabric-1.5.0+1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/PJvJUdGw/versions/dUXTUkG9/armory-fabric-1.5.0%2B1.21.1.jar",
+   "sha256": "f9aa50af761156e8d1feb6fbf16267dc7fa4eb1d905cb47d64f42f917cd2616a",
+   "size": 672634,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/arsenal-fabric-1.5.0+1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/LiP9Q3KV/versions/uUEYqOXk/arsenal-fabric-1.5.0%2B1.21.1.jar",
+   "sha256": "b5db3c2653133e4a8ea94523bd60f92b961f59d47fbb377220fc69a20a9dd8ad",
+   "size": 1235921,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/azurelibarmor-fabric-1.21.1-3.1.3.jar",
+   "url": "https://cdn.modrinth.com/data/pduQXSbl/versions/ECrTfeJS/azurelibarmor-fabric-1.21.1-3.1.3.jar",
+   "sha256": "dc402d74bcea0523df6379e45dd39e0eced8550dc582fc6d005990effc28675d",
+   "size": 583035,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/balm-fabric-1.21.1-21.0.66.jar",
+   "url": "https://cdn.modrinth.com/data/MBAkmtvl/versions/EghJxg4h/balm-fabric-1.21.1-21.0.66.jar",
+   "sha256": "fda64674da8959d8d3f0c4b5bc1e9543e867b16e9f078bffa704f95cd584a855",
+   "size": 805265,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/bards_rpg-fabric-1.1.0-1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/kL7Bjgmw/versions/sPGvU4SA/bards_rpg-fabric-1.1.0-1.21.1.jar",
+   "sha256": "61b5e33ca00b15c9482a29fddcd7ea009c356ab9d1e33977e87a1b18ce4ccb83",
+   "size": 14127916,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/berserker_rpg-fabric-3.1.0+1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/8hqOZzxM/versions/pjAHmQF7/berserker_rpg-fabric-3.1.0%2B1.21.1.jar",
+   "sha256": "89f4ce89a9fb4f76c5b83162fb68b6d4cb9bde1c22ad473383cea14229a0f175",
+   "size": 627847,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/bettercombat-fabric-2.4.0+1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/5sy6g3kz/versions/JJQpBecL/bettercombat-fabric-2.4.0%2B1.21.1.jar",
+   "sha256": "2ecd3284a4443300873bb7a7aba4643aacf91acd778b377faeffa44afe049b9b",
+   "size": 930023,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/bluemap-5.7-fabric.jar",
+   "url": "https://cdn.modrinth.com/data/swbUV1cr/versions/Dr2hvJBc/bluemap-5.7-fabric.jar",
+   "sha256": "67e7bd3037507c04ecfab8543222ad87552a81db85940c3c9935b2c517422fc4",
+   "size": 5517229,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/cloth-config-15.0.140-fabric.jar",
+   "url": "https://cdn.modrinth.com/data/9s6osm5g/versions/HpMb5wGb/cloth-config-15.0.140-fabric.jar",
+   "sha256": "33894e95da3af59014b39d126586d5241e07ea39f8618763e30dab637405f95f",
+   "size": 1157166,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/cobblemon-journey-mounts-1.7.2.jar",
+   "url": "https://cdn.modrinth.com/data/Vn5WCYr6/versions/RKZyNI1R/cobblemon-journey-mounts-1.7.2.jar",
+   "sha256": "8a1f4a53c82eed2cd91803cc32dc30fa34a2920d11d96af0c92864dea4c5deb8",
+   "size": 7368421,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/cobblemon-raiddens-addon-1.1.2.jar",
+   "url": "https://cdn.modrinth.com/data/s9ghSJVU/versions/gieDOfrO/cobblemon-raiddens-addon-1.1.2.jar",
+   "sha256": "54e931d8be797fd3c0192054fbdff7b11b1ec32dc8177e0b779f700b3dca4bbd",
+   "size": 52167,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/cobblemon_quests-[1.21.1]-fabric-1.2.0.jar",
+   "url": "https://eldoria-cobblemon.github.io/eldoria-launcher/arquivos/04/043e5aca225ae7be9b32d76c9d26f68f7404015276d357e8f324d04a99535c8d/cobblemon_quests-%5B1.21.1%5D-fabric-1.2.0.jar",
+   "sha256": "043e5aca225ae7be9b32d76c9d26f68f7404015276d357e8f324d04a99535c8d",
+   "size": 61127,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/cobblemonintegrations-fabric-1.21.1-1.1.8.jar",
+   "url": "https://cdn.modrinth.com/data/NPCfuUI4/versions/gy1AJCQB/cobblemonintegrations-fabric-1.21.1-1.1.8.jar",
+   "sha256": "c11481b0d77f3fbe7d8b16fe94a9448ae1608c07fc5800ae2bcc1f5cd000f088",
+   "size": 385418,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/cobblemonnpcs-v4.jar",
+   "url": "https://cdn.modrinth.com/data/Vp8Qj4qr/versions/47RbrHPS/cobblemonnpcs-v4.jar",
+   "sha256": "23791db334dcb0b9900973c455a06e622b10942ec787777cbaf8e6cb89db147b",
+   "size": 336526,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/cobblemonraiddens-fabric-0.11.7+1.21.1.jar",
+   "url": "https://eldoria-cobblemon.github.io/eldoria-launcher/arquivos/70/70a2e25ec3297001dd37b7627b027c6261fbb7cf34549f9de7862a74bc73d79b/cobblemonraiddens-fabric-0.11.7%2B1.21.1.jar",
+   "sha256": "70a2e25ec3297001dd37b7627b027c6261fbb7cf34549f9de7862a74bc73d79b",
+   "size": 2653799,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/cobblenav-fabric-2.4.1.jar",
+   "url": "https://cdn.modrinth.com/data/bI8Nt3uA/versions/BV5KiAcY/cobblenav-fabric-2.4.1.jar",
+   "sha256": "87e9f67ca3c98e44edf6f7b63d092a559adf3de4737af62d66d4eee2bbba837c",
+   "size": 1142193,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/cobblestats-fabric-1.9.2+1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/jlXFcQk4/versions/uxsx4bK4/cobblestats-fabric-1.9.2%2B1.21.1.jar",
+   "sha256": "959d47d1783d7f5437f7b73a1eff1b4291f893fde463e0d6501c97de269161fa",
+   "size": 68007,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/cobeffectiveness-fabric-0.3.jar",
+   "url": "https://cdn.modrinth.com/data/mCT9ubLg/versions/F4L9ZN4n/cobeffectiveness-fabric-0.3.jar",
+   "sha256": "229628172c239f3e7c13612db709e46b23528c5c6881162ccb1c214bfaf4dc22",
+   "size": 94372,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/combat_roll-fabric-2.0.6+1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/wGKYL7st/versions/UkTSsgGt/combat_roll-fabric-2.0.6%2B1.21.1.jar",
+   "sha256": "ab0d0a8ca8bbd5366b8c04496f8f25d7520b7c79745a3f98bb3f1ec42c906774",
+   "size": 192085,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/critical_strike-fabric-1.0.4+1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/ilvNBzFn/versions/8Ci3W6fL/critical_strike-fabric-1.0.4%2B1.21.1.jar",
+   "sha256": "daaadf98c856fd18d66a2e366efea5f9a5adbe3201544b0085beb3da6f107e58",
+   "size": 157796,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/customchestmenus-fabric-1.21.1-2.3.0.jar",
+   "url": "https://cdn.modrinth.com/data/1rhw3Wyu/versions/Pams08tN/customchestmenus-fabric-1.21.1-2.3.0.jar",
+   "sha256": "d28000bd0eb939e2cf18c44a96ba47ec8a0ba2f8bc553751c31ebccd0bde2365",
+   "size": 172034,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/defaultoptions-fabric-1.21.1-21.1.8.jar",
+   "url": "https://cdn.modrinth.com/data/WEg59z5b/versions/54JaBQkk/defaultoptions-fabric-1.21.1-21.1.8.jar",
+   "sha256": "4241d1a9f95d656b018a42ab4d51fe5893de5891b36fcc0d74b8c27eae07de14",
+   "size": 107949,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/dochi_cobblemon_editor-0.1.6-fabric-1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/9Qlu75X0/versions/w0ofeiV2/dochi_cobblemon_editor-0.1.6-fabric-1.21.1.jar",
+   "sha256": "ec4980ac1b9520a7daebf31de967df32689904bb56a8ab85cc28abcd772a4b1f",
+   "size": 2535448,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/dochi_rpg_maker-0.2.0-fabric-1.21.1.jar",
+   "url": "https://eldoria-cobblemon.github.io/eldoria-launcher/arquivos/04/0409ea6420010a8326e3f74b734b5b0db446f8a1c9fdc183ebc6905b47a4f6c4/dochi_rpg_maker-0.2.0-fabric-1.21.1.jar",
+   "sha256": "0409ea6420010a8326e3f74b734b5b0db446f8a1c9fdc183ebc6905b47a4f6c4",
+   "size": 6125609,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/eldoria-equipamentos-0.7.0.jar",
+   "url": "https://eldoria-cobblemon.github.io/eldoria-launcher/arquivos/2a/2a3117c0a87692968628c4e746b1a6104f76e9e6eb9c0de5bb2063a58b86cb7d/eldoria-equipamentos-0.7.0.jar",
+   "sha256": "2a3117c0a87692968628c4e746b1a6104f76e9e6eb9c0de5bb2063a58b86cb7d",
+   "size": 131660,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/eldoria-questboard-0.1.0.jar",
+   "url": "https://eldoria-cobblemon.github.io/eldoria-launcher/arquivos/7f/7f51812319b41156750b48de6aa9fdf7c7fa4b05ddca9d25f7297d35ef49c402/eldoria-questboard-0.1.0.jar",
+   "sha256": "7f51812319b41156750b48de6aa9fdf7c7fa4b05ddca9d25f7297d35ef49c402",
+   "size": 1905923,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/elemental_wizards_rpg-fabric-3.1.0+1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/PeZ4h4i0/versions/oe2HOmzq/elemental_wizards_rpg-fabric-3.1.0%2B1.21.1.jar",
+   "sha256": "107269def37886487c353892fd264146950b9c39f4ee02ec05bd38f5331927eb",
+   "size": 1424149,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/fabric-api-0.116.15+1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/P7dR8mSH/versions/Nlt8gI9z/fabric-api-0.116.15%2B1.21.1.jar",
+   "sha256": "a61a10f730ab8aa45ff42486ee65699e6e51c28a0c168deb161e7d4029473aa3",
+   "size": 2452718,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/fabric-language-kotlin-1.13.10+kotlin.2.3.20.jar",
+   "url": "https://cdn.modrinth.com/data/Ha28R6CL/versions/21TRTKmh/fabric-language-kotlin-1.13.10%2Bkotlin.2.3.20.jar",
+   "sha256": "f288f0273fa9d592b07869fa2bbd7bdca274998a38b87eb8485c109420921e2a",
+   "size": 7796348,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/ferritecore-7.0.3-fabric.jar",
+   "url": "https://cdn.modrinth.com/data/uXXizFIs/versions/sOzRw3CG/ferritecore-7.0.3-fabric.jar",
+   "sha256": "98c3ab1d5aab8f14b5d082d3f1a467727fd335f02d124555c94339761c4c18f2",
+   "size": 123450,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/fightorflight-fabric-0.11.0.jar",
+   "url": "https://cdn.modrinth.com/data/cTdIg5HZ/versions/CHXL2ka3/fightorflight-fabric-0.11.0.jar",
+   "sha256": "fa63e4f7427cb8ef38ada6472f6145c1b7e0f6035fe543a5ae7963e1ff6eb190",
+   "size": 1446545,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/forcemaster_rpg-fabric-3.1.0+1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/K3yHebFL/versions/60qSBk5A/forcemaster_rpg-fabric-3.1.0%2B1.21.1.jar",
+   "sha256": "64e891c7ad360a989fb0c8078450e5b327e96a8dd5fc114ee1c7026a146e68c6",
+   "size": 696365,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/ftb-library-fabric-2101.1.35.jar",
+   "url": "https://eldoria-cobblemon.github.io/eldoria-launcher/arquivos/73/73d0e241ac9465d9d1a1edc4c1691a9664d2f0890316df1ae6d4c9128c98c99b/ftb-library-fabric-2101.1.35.jar",
+   "sha256": "73d0e241ac9465d9d1a1edc4c1691a9664d2f0890316df1ae6d4c9128c98c99b",
+   "size": 1434871,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/ftb-quests-fabric-2101.1.34.jar",
+   "url": "https://eldoria-cobblemon.github.io/eldoria-launcher/arquivos/14/146f0ba80397c02aeb9c3c3ef3075823b06d71bdd95d1876ea61dc3af08488b8/ftb-quests-fabric-2101.1.34.jar",
+   "sha256": "146f0ba80397c02aeb9c3c3ef3075823b06d71bdd95d1876ea61dc3af08488b8",
+   "size": 1606449,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/ftb-teams-fabric-2101.1.11.jar",
+   "url": "https://eldoria-cobblemon.github.io/eldoria-launcher/arquivos/39/39e34b438e0232a614a8cf1269fcff2705b85fde8b930a03d558bc66a03c7cf6/ftb-teams-fabric-2101.1.11.jar",
+   "sha256": "39e34b438e0232a614a8cf1269fcff2705b85fde8b930a03d558bc66a03c7cf6",
+   "size": 303801,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/ftb-xmod-compat-fabric-21.1.11.jar",
+   "url": "https://eldoria-cobblemon.github.io/eldoria-launcher/arquivos/cc/ccf0139989b2c7a8ebfd5418476684f7b16116edf05f1c9136f52044a69d2684/ftb-xmod-compat-fabric-21.1.11.jar",
+   "sha256": "ccf0139989b2c7a8ebfd5418476684f7b16116edf05f1c9136f52044a69d2684",
+   "size": 116906,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/geckolib-fabric-1.21.1-4.9.2.jar",
+   "url": "https://cdn.modrinth.com/data/8BmcQJ2H/versions/dnJdtm0u/geckolib-fabric-1.21.1-4.9.2.jar",
+   "sha256": "eac4cf55e1cb99b22cb91ea87c774d2a670c1711a80f4aff50e6ad56b6c58e7e",
+   "size": 660416,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/immersive_melodies-fabric-0.7.1+1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/TaSmHw8V/versions/fy05lrwD/immersive_melodies-fabric-0.7.1%2B1.21.1.jar",
+   "sha256": "2b91795a12e8b7a84888d09449859c9fa93ad00a343204c4dd39d573ca055a92",
+   "size": 5545113,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/iris-fabric-1.8.14-beta.1+mc1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/YL57xq9U/versions/bAo1Qhte/iris-fabric-1.8.14-beta.1%2Bmc1.21.1.jar",
+   "sha256": "0ceb694040b4628bf3fa02286cfe5f0db833195669ab07f8caa4001359763eff",
+   "size": 2791343,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/jei-1.21.1-fabric-19.44.0.401.jar",
+   "url": "https://cdn.modrinth.com/data/u6dRKJwZ/versions/HWSzfi9w/jei-1.21.1-fabric-19.44.0.401.jar",
+   "sha256": "6ffabc95a6fe1cce1e3214f367e4ca6d5492977d877a59762bbdce8cc716eb05",
+   "size": 1728953,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/jewelry-fabric-2.4.0+1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/sNJAIjUm/versions/XXizhMNZ/jewelry-fabric-2.4.0%2B1.21.1.jar",
+   "sha256": "d0b512384dcc4206b4ba23c0c231cff8d79b11227b421e416dc75ec5f0255994",
+   "size": 511636,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/journeymap-fabric-1.21.1-6.0.3.jar",
+   "url": "https://cdn.modrinth.com/data/lfHFW1mp/versions/tGKMq7hr/journeymap-fabric-1.21.1-6.0.3.jar",
+   "sha256": "91b45650292729d25467e491411b6adb0f05921bf3215af0e2d2e990dc52dcc1",
+   "size": 4186400,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/libIPN-fabric-1.21.1-6.6.3.jar",
+   "url": "https://cdn.modrinth.com/data/onSQdWhM/versions/PSscYPRs/libIPN-fabric-1.21.1-6.6.3.jar",
+   "sha256": "e26e788c5c3542353c0c45fba231e9208a01b182d890815c22df40a1946b903e",
+   "size": 636114,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/libz-1.1.0.jar",
+   "url": "https://cdn.modrinth.com/data/yUBXc3AH/versions/tvtFvW21/libz-1.1.0.jar",
+   "sha256": "2dd8b63f81c61df728aa2a534829df89c62d2fb4ed5a28689949c4694ec0e2c7",
+   "size": 105863,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/litematica-fabric-1.21-0.19.61.jar",
+   "url": "https://cdn.modrinth.com/data/bEpr0Arc/versions/o7i8oi1Z/litematica-fabric-1.21-0.19.61.jar",
+   "sha256": "81b66009d4e0868e9e3e2e1593e0942ba0c651ddd8300586ae1ffbd227b6ba24",
+   "size": 1642590,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/lithium-fabric-0.15.4+mc1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/N08Z8wog/lithium-fabric-0.15.4%2Bmc1.21.1.jar",
+   "sha256": "92329d98c57f5a22091a0adb509fdb1d60113a5602c708b799b13134bad13baa",
+   "size": 797454,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/lne_archers-fabric-1.2.0+1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/Zl6rTul9/versions/NG8jDhT6/lne_archers-fabric-1.2.0%2B1.21.1.jar",
+   "sha256": "51c78cfe059e334d4c1033939ac143ac0d52f06efdd1bfe70f2b37bfb547d940",
+   "size": 1021006,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/lootr-fabric-1.21.1-1.11.38.123.jar",
+   "url": "https://cdn.modrinth.com/data/EltpO5cN/versions/VYbLUFAk/lootr-fabric-1.21.1-1.11.38.123.jar",
+   "sha256": "721a2386c8d6ed2090674be890f866b807ef504cda527fb78bbfc7a4a4d8053d",
+   "size": 1036331,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/lootrmon-fabric-1.21.1-0.0.0.3 (1).jar",
+   "url": "https://cdn.modrinth.com/data/ywwXJDli/versions/nquNxBhW/lootrmon-fabric-1.21.1-0.0.0.3.jar",
+   "sha256": "b00c1164518dc57759dab617dde8ac3a1ed8c88fe7c1ba3fc0a3729091c21fe5",
+   "size": 107470,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/malilib-fabric-1.21-0.21.10.jar",
+   "url": "https://cdn.modrinth.com/data/GcWjdA9I/versions/C99LEy6r/malilib-fabric-1.21-0.21.10.jar",
+   "sha256": "fed24701279ed7d55ea9e1bce9d4528e3f679ef9883c1ab7fb7a8c6a3fcd2915",
+   "size": 1411200,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/mega_showdown-fabric-1.2.0+1.8.1+1.21.1-release.jar",
+   "url": "https://cdn.modrinth.com/data/SszvX85I/versions/TKdAixuR/mega_showdown-fabric-1.2.0%2B1.8.1%2B1.21.1-release.jar",
+   "sha256": "d724243bdfdd12c266ddf5f5fa0df36c68a759258f015469ed1c405f3ba261a7",
+   "size": 20152218,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/missingmons-cobblemon-3.6.1.jar",
+   "url": "https://cdn.modrinth.com/data/jbbBrQVa/versions/8MaQRS0b/missingmons-cobblemon-3.6.1.jar",
+   "sha256": "64e48f79171e4736f910a98d3d9f1f5db2ef2c6181531e111d6fa007f537ec34",
+   "size": 3540078,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/more_relics-fabric-1.3.0+1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/IZ3b4kEa/versions/eCLsJDp7/more_relics-fabric-1.3.0%2B1.21.1.jar",
+   "sha256": "b8e00d1a50513e5bfb18f9b453a675f40b4c5992b968ef64deedd9473a552cee",
+   "size": 561996,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/more_rpg_library-fabric-2.7.1+1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/Wkc3lwHo/versions/2b7Juuc5/more_rpg_library-fabric-2.7.1%2B1.21.1.jar",
+   "sha256": "efbfe82997005272b81a83bf808a1ac4bda9a99907501f2bab2842e2df678787",
+   "size": 2000888,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/open-parties-and-claims-fabric-1.21.1-0.29.3.jar",
+   "url": "https://cdn.modrinth.com/data/gF3BGWvG/versions/rUrxgVyp/open-parties-and-claims-fabric-1.21.1-0.29.3.jar",
+   "sha256": "ce16639b15773588a26a4cd78aca89c4a3eac24fe6faa87c3a52c5d6f226ce4b",
+   "size": 1758901,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/owo-lib-0.12.15.4+1.21.jar",
+   "url": "https://cdn.modrinth.com/data/ccKDOlHs/versions/JB1fLQnc/owo-lib-0.12.15.4%2B1.21.jar",
+   "sha256": "825180ce17bc012fb450653b14df9f32479dcdd073fc3f133bb47462f5a63cec",
+   "size": 1183559,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/paladins-fabric-3.1.0+1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/FxXkHaLe/versions/7HrAIP5B/paladins-fabric-3.1.0%2B1.21.1.jar",
+   "sha256": "d2f6bf044299f4f9132d090010c1f4fbf9aabf33c9e1f96518eae66f8f87cc77",
+   "size": 3139169,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/phases-discord-rich-presence-2.8.1-1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/25psa7hI/versions/CoNiq2VM/phases-discord-rich-presence-2.8.1-1.21.1.jar",
+   "sha256": "45e9de2024c08218d63c767ad982f81b052529815e2e845bae589f2a76323ef9",
+   "size": 190582,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/player-animation-lib-fabric-2.0.4+1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/gedNE4y2/versions/CkedfDp3/player-animation-lib-fabric-2.0.4%2B1.21.1.jar",
+   "sha256": "86ef8a23a5bc8f86d67ed37f3a93380d3946bad64123b22862ed057e7b624efd",
+   "size": 204541,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/puffish_skills-0.18.3-1.21-fabric.jar",
+   "url": "https://cdn.modrinth.com/data/hqQqvaa4/versions/hz4AXzIa/puffish_skills-0.18.3-1.21-fabric.jar",
+   "sha256": "7552a03a408a31db51b297a29599605c38c19080ef7f2cc4bc2fb8a11ea7abdc",
+   "size": 613841,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/ranged_weapon_api-fabric-2.3.4+1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/AqaIIO6D/versions/JUmL4dj7/ranged_weapon_api-fabric-2.3.4%2B1.21.1.jar",
+   "sha256": "253ba0299f637695397794e1ce99a22f983bc083a572062b875c8b499c57bc79",
+   "size": 143230,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/relics-fabric-1.4.0+1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/BDQucwF0/versions/N9LYLPCa/relics-fabric-1.4.0%2B1.21.1.jar",
+   "sha256": "1b0483917d496a7ef8e7c6385312d26ac55a5ee446b56a913f0b76717972d2e6",
+   "size": 2190674,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/rogues-fabric-3.1.0+1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/3MKqoGuP/versions/7LjTUdiZ/rogues-fabric-3.1.0%2B1.21.1.jar",
+   "sha256": "34f73e980188f4312e782c7817215bd09a5f85822c6a1ce0d50fd2bb69e16441",
+   "size": 1772505,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/runes-fabric-1.3.2+1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/lP9Yrr1E/versions/MUfjgRc2/runes-fabric-1.3.2%2B1.21.1.jar",
+   "sha256": "083a82bd7de2c208a294decf49a93162a489e48ff2457563f18c86533b39b131",
+   "size": 326613,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/shulkerboxtooltip-fabric-5.1.9+1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/2M01OLQq/versions/NSrItCES/shulkerboxtooltip-fabric-5.1.9%2B1.21.1.jar",
+   "sha256": "5f9235d61d8c6e226e7caf21c2ca1b900964a7c79f713d153fb1f5e76c9051c4",
+   "size": 379091,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/sit-1.21.1-1.4.jar",
+   "url": "https://cdn.modrinth.com/data/VKXzIykF/versions/DpfxOIrO/sit-1.21.1-1.4.jar",
+   "sha256": "a726385d1c6781f93906dce38d125fe5f4da32b10ae5601bf855773939603c04",
+   "size": 14031,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/skill_tree-fabric-1.6.0+1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/PjDhruSC/versions/YEQ7tOIL/skill_tree-fabric-1.6.0%2B1.21.1.jar",
+   "sha256": "d7a2053e892aee5a27a7b16cfb19c1d24320f608a461b0ffe7ebd94d47781be7",
+   "size": 2989713,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/sodium-fabric-0.8.13-beta.2+mc1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/AANobbMI/versions/QV48eyCs/sodium-fabric-0.8.13-beta.2%2Bmc1.21.1.jar",
+   "sha256": "90261fcdab301314acc94c24bba483c2db1b5d94f645d92c69b9585e3422a176",
+   "size": 1574596,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/spell_engine-fabric-1.10.2+1.21.1 (1).jar",
+   "url": "https://cdn.modrinth.com/data/XvoWJaA2/versions/18UIA6JI/spell_engine-fabric-1.10.2%2B1.21.1.jar",
+   "sha256": "86704860bcad0c0556cecd95a0132b50cd61154633b04aeae94245c76cd0be36",
+   "size": 4640212,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/spell_power-fabric-1.6.0+1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/8ooWzSQP/versions/IyVyrKj8/spell_power-fabric-1.6.0%2B1.21.1.jar",
+   "sha256": "a309a4fb25b0ebdca071f1691b038165fb7d22adf6914b6456990dc47b11eb47",
+   "size": 226992,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/structure_pool_api-fabric-1.2.1+1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/LrYZi08Q/versions/Y6aBoKEl/structure_pool_api-fabric-1.2.1%2B1.21.1.jar",
+   "sha256": "54c1aa9b903f5dfdccfb80e6f2c88cb98147f45650b66e3a8a9d04a5f23e46b3",
+   "size": 140933,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/tiered-1.3.7.jar",
+   "url": "https://cdn.modrinth.com/data/z6sMEexp/versions/4wft2iIh/tiered-1.3.7.jar",
+   "sha256": "139337e8051a185f1670b83db5495ef5a8bf21f5eadfed13cfdaf3d6b4437217",
+   "size": 303810,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/trinkets-3.10.0.jar",
+   "url": "https://cdn.modrinth.com/data/5aaWibi9/versions/JagCscwi/trinkets-3.10.0.jar",
+   "sha256": "349fd2aa8930b232050ee5304db55e4ef738b017971afe7c84acd589a95fda2f",
+   "size": 272944,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/voicechat-fabric-1.21.1-2.6.22.jar",
+   "url": "https://cdn.modrinth.com/data/9eGKb6K1/versions/VS5X7jZd/voicechat-fabric-1.21.1-2.6.22.jar",
+   "sha256": "972a01592f670aa57f2dc2e3587a656b798106037468c61e4bfb49eba7d6ae36",
+   "size": 5369475,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/witcher-class-mod-fabric-3.1.0+1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/4eW1c7Gj/versions/O31KgVJs/witcher-class-mod-fabric-3.1.0%2B1.21.1.jar",
+   "sha256": "798af5b974a6da61d3171ebf6a498117cec201ec7a4d2aca9b47f8915836f0c9",
+   "size": 1662994,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/wizards-fabric-3.1.0.111+1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/NkGaQMDA/versions/8ONvdVJ2/wizards-fabric-3.1.0.111%2B1.21.1.jar",
+   "sha256": "ec62d1327e8353d68654f837132c0aa43818b50e3924ee8197cc3a8262520c33",
+   "size": 4538558,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "mods/wraith-waystones-3.3.4+mc1.21.1.jar",
+   "url": "https://cdn.modrinth.com/data/sTZr7NVo/versions/LUSqgrjd/wraith-waystones-3.3.4%2Bmc1.21.1.jar",
+   "sha256": "8bd5c0a7208d9ed7ea7b0bb973a55b96fae6f91f61bb7d09b6b06c4101aa7bc9",
+   "size": 445684,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "resourcepacks/ELDORIA COBBLEMON.zip",
+   "url": "https://eldoria-cobblemon.github.io/eldoria-launcher/arquivos/e9/e910c4a333cc90d916a55a912e7d4f6b35c944c0eef9e04890550620f2f4c970/ELDORIA%20COBBLEMON.zip",
+   "sha256": "e910c4a333cc90d916a55a912e7d4f6b35c944c0eef9e04890550620f2f4c970",
+   "size": 101388777,
+   "modo": "sempre"
+  },
+  {
+   "caminho": "config/phases-discord-rich-presence.json",
+   "url": "https://eldoria-cobblemon.github.io/eldoria-launcher/arquivos/b9/b91ebc886170b93462e3fcacfc4e42a204e93d1b324471f5fd7d7bac82ca8275/phases-discord-rich-presence.json",
+   "sha256": "b91ebc886170b93462e3fcacfc4e42a204e93d1b324471f5fd7d7bac82ca8275",
+   "size": 1112,
+   "modo": "uma_vez"
+  }
+ ],
+ "noticias": [
+  {
+   "titulo": "Bem-vindo ao Launcher de Eldoria",
+   "data": "04/10/2026",
+   "texto": "Este é o launcher oficial do servidor. Ele baixa e atualiza sozinho tudo o que você precisa: Java, Minecraft, Fabric, mods e o resourcepack ELDORIA.\n\nÉ só escolher o nick e clicar em Jogar.",
+   "imagem": {
+    "url": "https://eldoria-cobblemon.github.io/eldoria-launcher/arquivos/ac/ac6b76eae05434f3351f6b2469d45bff7cdd941b2bf350af1dcf406acb46e165/imagem.jpg",
+    "sha256": "ac6b76eae05434f3351f6b2469d45bff7cdd941b2bf350af1dcf406acb46e165",
+    "size": 335983
+   }
+  }
+ ]
+}
