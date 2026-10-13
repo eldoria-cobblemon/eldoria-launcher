@@ -1,0 +1,130 @@
+# Publica o resourcepack no launcher sozinho, toda vez que o main do repo do pack muda.
+# Gerado pelo "npm run enviar" a partir de eldoria_launcher/publicador/acao/ — não editar aqui (é sobrescrito).
+#
+# Segredos do repositório:
+#   ELDORIA_CHAVE_PRIVADA    chave que assina o manifesto (a mesma do PC do dono)
+#   RESOURCEPACK_DEPLOY_KEY  chave SSH só de leitura, cadastrada como Deploy key no repo do pack
+name: Resourcepack -> launcher
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
+    inputs:
+      sem_pack:
+        description: 'Só reassinar o manifesto (teste), sem olhar o pack'
+        type: boolean
+        default: false
+  repository_dispatch:
+    types: [resourcepack]
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: publicacao
+  cancel-in-progress: false
+
+env:
+  REPO_PACK: 'Angelazamaro/Resourcepack-eldoria'
+  RAMO_PACK: 'main'
+  ELDORIA_PACK_NOME: 'ELDORIA COBBLEMON.zip'
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: O pack mudou?
+        id: ver
+        env:
+          CHAVE_LEITURA: ${{ secrets.RESOURCEPACK_DEPLOY_KEY }}
+          GH_TOKEN: ${{ github.token }}
+          SEM_PACK: ${{ inputs.sem_pack }}
+        run: |
+          set -euo pipefail
+          if [ "$SEM_PACK" = "true" ]; then echo "mudou=sim" >> "$GITHUB_OUTPUT"; exit 0; fi
+          if [ -z "$CHAVE_LEITURA" ]; then echo "::error::Falta o segredo RESOURCEPACK_DEPLOY_KEY"; exit 1; fi
+          mkdir -p ~/.ssh
+          printf '%s\n' "$CHAVE_LEITURA" > ~/.ssh/pack && chmod 600 ~/.ssh/pack
+          echo 'github.com ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOMqqnkVzrm0SdG6UOoqKLsabgH5C9okWi0dh2l9GKJl' > ~/.ssh/known_hosts
+          commit=$(GIT_SSH_COMMAND='ssh -i ~/.ssh/pack -o IdentitiesOnly=yes' git ls-remote "git@github.com:$REPO_PACK.git" "refs/heads/$RAMO_PACK" | cut -f1) || commit=''
+          rm -f ~/.ssh/pack
+          if [ -z "$commit" ]; then
+            msg="Sem acesso ao ramo $RAMO_PACK de $REPO_PACK (Deploy key cadastrada lá?)"
+            # rodada automática: só avisa (senão chega e-mail de falha a cada 10 min); manual: erro
+            if [ "$GITHUB_EVENT_NAME" = "schedule" ]; then echo "::warning::$msg"; echo "mudou=nao" >> "$GITHUB_OUTPUT"; exit 0; fi
+            echo "::error::$msg"; exit 1
+          fi
+          publicado=$(gh api -H 'Accept: application/vnd.github.raw' "repos/$GITHUB_REPOSITORY/contents/manifest.json" | jq -r '.resourcepackCommit // ""')
+          echo "commit=$commit" >> "$GITHUB_OUTPUT"
+          if [ "$commit" = "$publicado" ] && [ "$GITHUB_EVENT_NAME" != "workflow_dispatch" ]; then
+            echo "Pack já publicado (${commit:0:7})."
+            echo "mudou=nao" >> "$GITHUB_OUTPUT"
+          else
+            echo "Pack novo: ${publicado:0:7} -> ${commit:0:7}"
+            echo "mudou=sim" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Baixa o launcher publicado
+        if: steps.ver.outputs.mudou == 'sim'
+        uses: actions/checkout@v5
+        with:
+          path: site
+          fetch-depth: 1
+
+      - name: Baixa o pack
+        if: steps.ver.outputs.mudou == 'sim' && inputs.sem_pack != true
+        uses: actions/checkout@v5
+        with:
+          repository: ${{ env.REPO_PACK }}
+          ref: ${{ steps.ver.outputs.commit }}
+          ssh-key: ${{ secrets.RESOURCEPACK_DEPLOY_KEY }}
+          persist-credentials: false
+          path: pack
+          fetch-depth: 1
+
+      - uses: actions/setup-node@v5
+        if: steps.ver.outputs.mudou == 'sim'
+        with:
+          node-version: 22
+
+      - name: Monta e assina
+        id: assina
+        if: steps.ver.outputs.mudou == 'sim'
+        working-directory: site
+        env:
+          ELDORIA_CHAVE_PRIVADA: ${{ secrets.ELDORIA_CHAVE_PRIVADA }}
+          GH_TOKEN: ${{ github.token }}
+          COMMIT: ${{ steps.ver.outputs.commit }}
+          SEM_PACK: ${{ inputs.sem_pack }}
+        run: |
+          if [ "$SEM_PACK" = "true" ]; then node .github/eldoria/publicar_pack.mjs --sem-pack
+          else node .github/eldoria/publicar_pack.mjs ../pack "$COMMIT"; fi
+
+      - name: Envia (commit único, sem histórico)
+        if: steps.ver.outputs.mudou == 'sim'
+        working-directory: site
+        env:
+          SEQ: ${{ steps.assina.outputs.seq }}
+          RAMO: ${{ github.event.repository.default_branch }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git config core.autocrlf false
+          antes=$(git rev-parse HEAD)
+          git checkout -q --orphan envio
+          git add -A
+          git commit -q -m "Publicação #$SEQ (resourcepack pela Action)"
+          git push --force-with-lease="$RAMO:$antes" origin "HEAD:$RAMO"
+          gh api -X POST "repos/$GITHUB_REPOSITORY/pages/builds" > /dev/null || echo "Pages já estava publicando"
+
+      - name: Confere no ar
+        if: steps.ver.outputs.mudou == 'sim'
+        working-directory: site
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node .github/eldoria/publicar_pack.mjs conferir
